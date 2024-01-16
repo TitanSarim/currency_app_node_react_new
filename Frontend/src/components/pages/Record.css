@@ -1,0 +1,117 @@
+.table-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    top: 120px;
+}
+
+.record-btn{
+    position: relative;
+    display: flex;
+    top: 120px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.record-btn a{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    justify-content: center;
+    background-color: rgb(8, 99, 116);
+    padding: 3px 15px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    gap: 4px;
+    border-radius: 4px;
+}
+
+.record-btn a:hover{
+    background-color: tomato;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    padding-right: 20px;
+    padding-left: 20px;
+  
+    transition: all 500ms;
+}
+
+.record-btn a:active{
+    opacity: 0.5;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+
+.table-container table{
+    border: 1px solid white;
+    border-radius: 4px;
+    border: none;
+    padding: 3px 6pxb;
+}
+
+.table-container thead tr{
+    /* border-bottom: 1px solid white; */
+    background-color: rgb(8, 99, 116);
+    color: white;
+    text-align: center;
+    padding: 9px 0px;
+}
+.table-container thead tr th{
+    width: 120px;
+    text-align: center;
+}
+
+.table-container tbody tr{
+    background-color: white;
+    border-bottom: 1px solid rgb(170, 170, 170);
+    display: flex;
+    flex-direction: row;justify-content: space-between;
+}
+
+.table-container tbody tr td{
+    width: 120px;
+    text-align: center;
+    position: relative;
+    padding: 9px 0px;
+}
+
+
+.table-container tr{
+    display: flex;
+}
+
+.user-id{
+    width: 50px !important;
+}
+
+.total-amount{
+    width: 130px !important;
+}
+
+.delete-btn{
+    width: 60px !important;
+    align-items: center;
+}
+
+.delete-btn button{
+    background-color: white;
+    border: 1px solid rgb(3, 115, 113);
+    border-radius: 4px;
+    padding: 3px 3px 0px 3px;
+    transition:  all 500ms;
+    cursor: pointer;
+}
+
+.delete-btn button:hover{
+    border: 1px solid rgb(3, 68, 66);
+    transform: scale(1.05);
+}

@@ -1,0 +1,115 @@
+.create-record{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(27, 25, 41);
+}
+
+.create-record-bg{
+    background-image: url('../../assets/4k-space-glowing-ring-es4tss2e6i1dzfj6.png');
+    height: 24vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.create-record-bg p{
+    position: relative;
+    bottom: 30px;
+    left: 20px;
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.create-record-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 40px;
+    gap: 40px;
+}
+
+.create-record-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: rgb(36, 34, 48);
+    padding: 30px 30px 20px 30px;
+    border-radius: 4px;
+    
+}
+
+.create-record-wrapper input{
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    width: 300px;
+    outline: none !important;
+    transition: all 500ms;
+    height: 40px;
+    color: white;
+}
+
+.create-record-wrapper select{
+    border: none;
+    background-color: rgb(36, 34, 48);
+    border-bottom: 1px solid rgb(160, 160, 160);
+    width: 300px;
+    outline: none !important;
+    transition: all 500ms;
+    height: 40px;
+    color: white;
+}
+
+
+.create-record-wrapper p {
+    color: red;
+    font-weight: 700;
+    font-size: 11px;
+}
+
+
+
+.create-record-calculationbox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    gap: 40px;
+    background-color: rgb(36, 34, 48);
+    padding: 30px 30px 20px 30px;
+    border-radius: 4px;
+    height: 33.5vh;
+}
+
+.create-record-calculationbox input{
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    width: 300px;
+    outline: none !important;
+    transition: all 500ms;
+    height: 40px;
+    color: white;
+}
+
+.create-record-calculationbox button{
+    background-color: rgb(8, 99, 116);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 500ms;
+}
+.create-record-calculationbox button:hover{
+    transform: scale(1.03);
+    background-color: tomato;
+}
