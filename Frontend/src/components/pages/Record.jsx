@@ -45,8 +45,8 @@ const Record = () => {
 
         try {
             for (const item of data) {
-            const response = await axios.delete(`http://localhost:3800/api/v1/deleteCurrencies/${item._id}`);
-            console.log(`Deleted item with userid ${item._id}:`, response.data);
+            const response = await axios.delete(`http://localhost:3800/api/v1/deleteCurrencies/${item.id}`);
+            console.log(`Deleted item with userid ${item.id}:`, response.data);
         }
             window.location.reload()
         } catch (error) {
