@@ -1,5 +1,6 @@
 const app = require("./app");
-const connectDatabase =require("./config/database")
+
+
 // handling uncought Exception
 process.on("uncaughtException", (err) => {
   console.log(`Error: ${err.message}`);
@@ -12,11 +13,13 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: ".env" });
 }
 
-connectDatabase()
+
+require('./models/currencyModels');
+
 //server port
 const server = app.listen(process.env.PORT, ()=>{
-    console.log(`server is working on http://localhost:${process.env.PORT}`);
-  });
+  console.log(`server is working on http://localhost:${process.env.PORT}`);
+});
 
 // unhandled promise rejaection
 process.on("unhandledRejection", (err) => {

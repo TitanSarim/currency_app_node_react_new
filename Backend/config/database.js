@@ -1,13 +1,26 @@
-const mongoose = require("mongoose")
+const { createPool } = require("mysql2/promise");
 
-const connectDatabase = () =>{
+const pool = createPool({
+    host: process.env.host,
+    port: "3306",
+    user: process.env.user,
+    password: process.env.password,
+    database: process.env.database,
+    waitForConnections: true,
+    connectionLimit: 100000,
+    queueLimit: 0,
+  });
 
-    mongoose.connect(process.env.DATABASE_URL)
-        .then((data) =>{
-            console.log(`Mongodb Connected with server ${data.connection.host}`);
-        });
+  pool
+  .getConnection()
+  .then((connection) => {
+    console.log(`Connected to MySQL database as ID ${connection.threadId}`);
+    connection.release();
+  })
+  .catch((error) => {
+    console.error(`Unable to connect to MySQL database: ${error}`);
+    process.exit(1);
+  });
 
 
-}
-
-module.exports = connectDatabase
+module.exports = pool;

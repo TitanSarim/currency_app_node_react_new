@@ -19,6 +19,7 @@ const Record = () => {
         const fetchData = async() => {
             try {
                 const response = await axios.get('http://localhost:3800/api/v1/getAllCurrencies')
+                console.log("response",response)
                 setData(response.data.data)
             } catch (error) {
                 setError(error.message || 'An error occured')
@@ -78,7 +79,7 @@ const Record = () => {
                 
                 <thead>
                         <tr>
-                            {/* <th className='user-id'>Id</th> */}
+                            <th className='user-id'>Id</th>
                             <th>Name</th>
                             <th>CNIC</th>
                             <th>Currency</th>
@@ -96,7 +97,7 @@ const Record = () => {
                 <tbody>
                         {data?.map((item) => (
                             <tr  key={item.userid}>
-                                {/* <td className='user-id'>{item._id}</td>  */}
+                                <td className='user-id'>{item.id}</td> 
                                 <td>{item.name}</td>
                                 <td>{item.cnic}</td>
                                 <td>{item.currency}</td> 
@@ -104,7 +105,7 @@ const Record = () => {
                                 <td className='total-amount'>{item.totalamount}</td>
                                 <td>{moment(item.updatedAt).format("MMM Do YY")}</td>
                                 <td className='delete-btn'>
-                                <button onClick={() => handleSingleClick(item?._id)}>
+                                <button onClick={() => handleSingleClick(item?.id)}>
                                     <img src={bin} width={20} alt='bin'/>
                                 </button>
                                 </td>
