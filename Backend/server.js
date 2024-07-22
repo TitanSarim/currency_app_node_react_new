@@ -15,6 +15,7 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 
 
 require('./models/currencyModels');
+require('./models/userModels');
 
 //server port
 const server = app.listen(process.env.PORT, ()=>{

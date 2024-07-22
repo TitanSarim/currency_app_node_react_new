@@ -18,7 +18,9 @@ if (process.env.NODE_ENV !== "production") {
 
 
   const currency = require("./routes/currencyRouter");
+  const user = require("./routes/userRoute")
   app.use("/api/v1", currency);
+  app.use("/api/v1", user);
 
 
   module.exports = app;
