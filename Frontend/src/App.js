@@ -6,6 +6,7 @@ import CreateRecord from './components/pages/CreateRecord';
 import Record from './components/pages/Record';
 import NavBar from './components/utils/NavBar';
 import Rates from './components/pages/Rates';
+import Auth from './components/pages/auth/Auth';
 
 
 
@@ -32,6 +33,8 @@ function App() {
           <Route path='/addRecord' element={<CreateRecord/>}/>
 
           <Route path='/Rates' element={<Rates/>}/>
+
+          <Route path='/auth' element={<Auth/>}/>
 
         </Routes>
 
